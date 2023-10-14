@@ -23,7 +23,6 @@ function Login() {
         setError(false)
     }
 
-
   return (
     <div className='bg-[#e3e9f3]'>
         {mostrar ? (
@@ -58,7 +57,7 @@ function Login() {
                         <form onSubmit={handleSubmit}>
                             {error && 
                                 <div className='bg-red-600 text-white font-bold uppercase mx-6 py-3 text-center mb-6'>
-                                    <p>Todos los campos son obligatorios</p>
+                                    Todos los campos son necesarios
                                 </div>
                             }
                             <div className='flex justify-center'>
@@ -80,12 +79,13 @@ function Login() {
                                 />
                             </div>
                             <div className='flex justify-center'>
-                                
+                                <Link to={'/dashboard'}>
                                     <input 
-                                        className='bg-indigo-600 text-white px-3 py-3 rounded-full shadow-lg w-[80%] focus:outline-none hover:bg-indigo-800 transition duration-500 ease-in-out cursor-pointer'
+                                        className='bg-indigo-600 text-white px-3 py-3 rounded-full shadow-lg w-[270px] focus:outline-none hover:bg-indigo-800 transition duration-500 ease-in-out cursor-pointer'
                                         type="submit"
                                         value={'Iniciar Sesión'}
-                                    />                                
+                                    />  
+                                </Link>                              
                             </div>
                         </form>
                     </div>

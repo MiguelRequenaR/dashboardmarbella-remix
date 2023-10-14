@@ -3,7 +3,7 @@ import Login from "./login";
 
   export const meta: MetaFunction = () => {
     return [
-      { title: "New Remix App" },
+      { title: "Login Marbella" },
       { name: "description", content: "Welcome to Remix!" },
     ];
   };
