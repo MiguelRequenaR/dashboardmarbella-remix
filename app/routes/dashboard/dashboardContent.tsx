@@ -1,4 +1,3 @@
-import React from 'react'
 
 function DashboardContent() {
   return (
@@ -45,7 +44,7 @@ function DashboardContent() {
                 </div>
             </div>
         </div>
-        <div>
+        <div className="flex">
             <div className='p-5 m-6 bg-[#f6f6f9] w-[55%] rounded-2xl'>
                 <div className='flex items-center justify-between'>
                     <div className='flex items-center'>
@@ -119,8 +118,42 @@ function DashboardContent() {
                     </tbody>
                 </table>
             </div>
-            <div>
-
+            <div className="p-5 m-6 bg-[#f6f6f9] w-[45%] rounded-2xl">
+                <div className='flex items-center justify-between'>
+                    <div className='flex items-center'>
+                        <i className="ri-list-ordered text-lg"></i>
+                        <p className='text-2xl text-[#363949] font-bold pl-4'>
+                            Recordatorio
+                        </p>
+                    </div>
+                    <div>
+                        <i className="ri-filter-3-line text-lg pr-4"></i>
+                        <i className="ri-search-line text-lg"></i>
+                    </div>
+                </div>
+                <div className="pt-5 space-y-5">
+                    <div className="flex justify-between items-center bg-[#eeeeee] py-2 px-2 rounded-xl">
+                        <div className="flex">
+                            <i className="ri-checkbox-line text-lg font-semibold mr-2"></i>
+                            <h3>Comenzar una reunión</h3>
+                        </div>
+                        <i className="ri-list-ordered text-lg"></i>
+                    </div>
+                    <div className="flex justify-between items-center bg-[#eeeeee] py-2 px-2 rounded-xl">
+                        <div className="flex">
+                            <i className="ri-checkbox-line text-lg font-semibold mr-2"></i>
+                            <h3>Analizar Proyecto</h3>
+                        </div>
+                        <i className="ri-list-ordered text-lg"></i>
+                    </div>
+                    <div className="flex justify-between items-center bg-[#eeeeee] py-2 px-2 rounded-xl">
+                        <div className="flex">
+                            <i className="ri-checkbox-blank-line text-lg font-semibold mr-2"></i>
+                            <h3>Verificar Proyecto</h3>
+                        </div>
+                        <i className="ri-list-ordered text-lg"></i>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
