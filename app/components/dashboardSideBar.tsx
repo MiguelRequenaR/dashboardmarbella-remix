@@ -3,9 +3,9 @@
 function DashboardSideBar() {
   return (
     <div>
-        <div className="pl-10 pt-20 h-screen">
+        <div className="pl-10 pt-20 h-screen w-[220px]">
             <ul className="space-y-8">
-                <li className="border rounded-l-xl border-r-0 bg-[#eeeeee] border-[#eeeeee] py-2 px-2 ">
+                <li>
                     <i className="ri-dashboard-line text-xl font-bold mr-2 text-[#388e3c]"></i>
                     <a href="" className="text-lg font-bold text-[#388e3c]">Dashboard</a>
                 </li>
