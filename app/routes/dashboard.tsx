@@ -1,8 +1,8 @@
 import 'remixicon/fonts/remixicon.css'
 import type { MetaFunction } from "@remix-run/node";
 import DashboardHeader from '~/components/dashboardHeader'
-import DashboardSideBar from '~/components/dashboardSideBar';
-import DashboardContent from '~/routes/dashboard/dashboardContent';
+import DashboardSideBar from '~/routes/dashboard/dashboardSideBar';
+import DashboardPP from '~/routes/dashboard/dashboardPP';
 
 export const meta: MetaFunction = () => {
     return [
@@ -17,7 +17,7 @@ function Dashboard() {
         <DashboardHeader />
         <div className='flex h-screen'>
           <DashboardSideBar />
-          <DashboardContent />
+          <DashboardPP />
         </div>
     </div>
   )

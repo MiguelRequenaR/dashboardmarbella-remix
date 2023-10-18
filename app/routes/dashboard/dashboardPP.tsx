@@ -1,10 +1,10 @@
 
-function DashboardContent() {
+function DashboardPP() {
   return (
     <main className='w-full bg-[#eeeeee] rounded-tl-xl'>
         <div className='flex justify-between items-center pr-5'>
             <div className='pt-5 pl-5'>
-                <h2 className='text-4xl font-bold text-[#363949]'>Dashboard</h2>
+                <h2 className='text-4xl font-bold text-[#363949]'>Panel Principal</h2>
                 <p className='mt-4 text-[#aaaaaa]'>Dashboard / <span className='text-[#1976d8]'>Análisis</span></p>
             </div>
             <div className='flex items-center justify-center h-10 px-4 rounded-full bg-[#1976d8] text-white font-semibold text-md'>
@@ -160,4 +160,4 @@ function DashboardContent() {
   )
 }
 
-export default DashboardContent
+export default DashboardPP
