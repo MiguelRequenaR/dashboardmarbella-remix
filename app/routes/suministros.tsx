@@ -1,10 +1,10 @@
-import React from 'react'
+import AppLayout from './layout/appLayout'
 
 function DashboardSuministros() {
   return (
-    <div>
+    <AppLayout>
         Aca va el formulario de suministros
-    </div>
+    </AppLayout>
   )
 }
 

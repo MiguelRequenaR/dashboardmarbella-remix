@@ -1,7 +1,7 @@
 import 'remixicon/fonts/remixicon.css'
 import type { MetaFunction } from "@remix-run/node";
 import DashboardHeader from '~/components/dashboardHeader'
-import DashboardSideBar from '~/routes/dashboard/dashboardSideBar';
+import DashboardSideBar from '~/components/sideBar';
 import DashboardPP from '~/routes/dashboard/dashboardPP';
 
 export const meta: MetaFunction = () => {

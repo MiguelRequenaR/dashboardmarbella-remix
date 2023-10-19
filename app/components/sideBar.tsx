@@ -15,11 +15,11 @@ function DashboardSideBar() {
                     <li>
                         <a href="" className="text-lg font-bold text-[#388e3c]">Panel Principal</a>
                     </li>
-                    <Link to={'/dashboardsuministros'}>
+                    <Link to='/suministros'>
                         <li>
                             <h1 className="text-lg font-bold text-[#363949]">Suministros</h1>
                         </li>
-                    </Link>
+                    </Link>           
                     <li>
                         <a href="" className="text-lg font-bold text-[#363949]">Proyectos</a>
                     </li>
