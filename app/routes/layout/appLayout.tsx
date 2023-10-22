@@ -5,7 +5,7 @@ import DashboardSideBar from '~/components/sideBar'
 
 function AppLayout({children}: {children: React.ReactNode}) {
   return (
-    <div>
+    <div className='bg-[#ffffff]'>
         <DashboardHeader />
         <div className='flex h-screen'>
           <DashboardSideBar />

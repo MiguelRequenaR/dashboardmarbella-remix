@@ -13,7 +13,7 @@ export const meta: MetaFunction = () => {
 
 function Dashboard() {
   return (
-    <div>
+    <div className='bg-[#ffffff]'>
         <DashboardHeader />
         <div className='flex h-screen'>
           <DashboardSideBar />
