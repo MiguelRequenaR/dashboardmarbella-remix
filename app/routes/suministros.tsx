@@ -1,4 +1,6 @@
 import AppLayout from './layout/appLayout'
+import SuministrosList, { loader } from '~/components/suministrosList'
+
 
 function DashboardSuministros() {
   return (
@@ -25,6 +27,7 @@ function DashboardSuministros() {
               <i className="ri-add-line"></i>
             </div>
           </div>
+          <SuministrosList />
       </div>
     </AppLayout>
   )

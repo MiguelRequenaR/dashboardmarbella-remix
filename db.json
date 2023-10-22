@@ -1,0 +1,22 @@
+{
+    "suministros":[
+        {
+            "id": 1,
+            "codigo": "H2213",
+            "producto": "ladrillos",
+            "cantidad": 5000,
+            "proveedor": "Sodimac",
+            "fechaingreso": "12/12/2021",
+            "fechasalida": "12/12/2022"
+        },
+        {
+            "id": 2,
+            "codigo": "M2213",
+            "producto": "planchas",
+            "cantidad": 500,
+            "proveedor": "Sodimac",
+            "fechaingreso": "12/12/2021",
+            "fechasalida": "12/12/2022"
+        }
+    ]
+}
