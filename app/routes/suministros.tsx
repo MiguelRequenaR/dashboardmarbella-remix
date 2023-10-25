@@ -1,15 +1,8 @@
 import AppLayout from './layout/appLayout'
 import SuministrosList from '~/components/suministrosList'
 import { useState, useEffect } from 'react'
-import AddSuministros from '~/components/addSuministros'
-
 
 function DashboardSuministros() {
-  const [modal, setModal] = useState(false)
-
-  const toggleModal = () => {
-    setModal(!modal)
-  }
 
   return (
     <AppLayout>
@@ -28,19 +21,112 @@ function DashboardSuministros() {
                 className='bg-white px-2 py-1 rounded-lg w-[80%] mb-5 border border-gray-300 focus:outline-none'
               />
             </div>
-            <div 
-              className='flex bg-[#38c2cf] text-white px-2 py-1 rounded-lg cursor-pointer hover:bg-[#7ecdd4]'
-              onClick={toggleModal}
-            >
-              <p className='mr-2'>
-                Agregar
-              </p>
-              <i className="ri-add-line"></i>
-            </div>
+              <button className="btn bg-[#38c2cf] text-white px-2 py-1 rounded-lg cursor-pointer hover:bg-[#7ecdd4]" onClick={() => {
+                  const modal = document.getElementById('my_modal_4') as HTMLDialogElement | null;
+                  if (modal) {
+                    modal.show();
+                  }
+                }}>
+                  Agregar Suministros
+              </button>  
           </div>
           <SuministrosList />
+
+          <dialog id="my_modal_4" className="modal">
+            <div className="modal-box w-11/12 max-w-5xl">
+              <h3 className="font-bold text-xl text-center mb-6">Agregar nuevo suministro</h3>
+                <form method="dialog" className='grid grid-cols-2 gap-4'>
+                  <div className="mb-4">
+                    <label htmlFor="codigo" className="block text-sm font-medium text-gray-700">
+                      Código:
+                    </label>
+                    <input
+                      type="text"
+                      id="codigo"
+                      name="codigo"
+                      className="mt-1 p-2 block w-full rounded-md bg-gray-100 border-gray-300 focus:ring focus:ring-[#38c2cf] focus:border focus:border-[#38c2cf]"
+                    />
+                  </div>
+
+                  <div className="mb-4">
+                    <label htmlFor="producto" className="block text-sm font-medium text-gray-700">
+                      Producto:
+                    </label>
+                    <input
+                      type="text"
+                      id="producto"
+                      name="producto"
+                      className="mt-1 p-2 block w-full rounded-md bg-gray-100 border-gray-300 focus:ring focus:ring-[#38c2cf] focus:border focus:border-[#38c2cf]"
+                    />
+                  </div>
+
+                  <div className="mb-4">
+                    <label htmlFor="cantidad" className="block text-sm font-medium text-gray-700">
+                      Cantidad:
+                    </label>
+                    <input
+                      type="text"
+                      id="cantidad"
+                      name="cantidad"
+                      className="mt-1 p-2 block w-full rounded-md bg-gray-100 border-gray-300 focus:ring focus:ring-[#38c2cf] focus:border focus:border-[#38c2cf]"
+                    />
+                  </div>
+
+                  <div className="mb-4">
+                    <label htmlFor="proveedor" className="block text-sm font-medium text-gray-700">
+                      Proveedor:
+                    </label>
+                    <input
+                      type="text"
+                      id="proveedor"
+                      name="proveedor"
+                      className="mt-1 p-2 block w-full rounded-md bg-gray-100 border-gray-300 focus:ring focus:ring-[#38c2cf] focus:border focus:border-[#38c2cf]"
+                    />
+                  </div>
+
+                  <div className="mb-4">
+                    <label htmlFor="fechaIngreso" className="block text-sm font-medium text-gray-700">
+                      Fecha de Ingreso:
+                    </label>
+                    <input
+                      type="date"
+                      id="fechaIngreso"
+                      name="fechaIngreso"
+                      className="mt-1 p-2 block w-full rounded-md bg-gray-100 border-gray-300 focus:ring focus:ring-[#38c2cf] focus:border focus:border-[#38c2cf]"
+                    />
+                  </div>
+
+                  <div className="mb-4">
+                    <label htmlFor="fechaSalida" className="block text-sm font-medium text-gray-700">
+                      Fecha de Salida:
+                    </label>
+                    <input
+                      type="date"
+                      id="fechaSalida"
+                      name="fechaSalida"
+                      className="mt-1 p-2 block w-full rounded-md bg-gray-100 border-gray-300 focus:ring focus:ring-[#38c2cf] focus:border focus:border-[#38c2cf]"
+                    />
+                  </div>                 
+                  <div className="modal-action grid grid-cols-2 gap-4 col-span-2">
+                    <div className="col-span-1 flex justify-center">
+                      <button className="btn w-[50%]">
+                        Close
+                      </button>
+                    </div>
+                    <div className="col-span-1 flex justify-center">
+                      <button
+                        className="btn bg-[#38c2cf] text-white w-[50%] px-2 py-1 rounded-lg cursor-pointer hover:bg-[#7ecdd4]"
+                        type="submit"
+                      >
+                        Agregar
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+          </dialog>
       </div>
-      {modal && <AddSuministros toggleModal={toggleModal} />}
+      
     </AppLayout>
   )
 }
