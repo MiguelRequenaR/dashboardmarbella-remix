@@ -1,5 +1,5 @@
 import AppLayout from './layout/appLayout'
-import SuministrosList, { loader } from '~/components/suministrosList'
+import SuministrosList from '~/components/suministrosList'
 
 
 function DashboardSuministros() {
