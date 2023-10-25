@@ -22,27 +22,27 @@ function SuministrosList() {
 
   return (
     <div className="flex justify-center">
-      <table>
-        <thead>
+      <table className="bg-[#fff] w-[90%] shadow mt-5 table-auto">
+        <thead className="bg-[#38c2cf] text-white">
           <tr>
-            <th>Código</th>
-            <th>Producto</th>
-            <th>Cantidad</th>
-            <th>Proveedor</th>
-            <th>Fecha de ingreso</th>
-            <th>Fecha de salida</th>
-            <th>Acciones</th>
+            <th className="p-2">Código</th>
+            <th className="p-2">Producto</th>
+            <th className="p-2">Cantidad</th>
+            <th className="p-2">Proveedor</th>
+            <th className="p-2">Fecha de ingreso</th>
+            <th className="p-2">Fecha de salida</th>
+            <th className="p-2">Acciones</th>
           </tr>
         </thead>
         <tbody>
           {suministros.map((suministro) => (
             <tr key={suministro.id}>
-              <td>{suministro.codigo}</td>
-              <td>{suministro.producto}</td>
-              <td>{suministro.cantidad}</td>
-              <td>{suministro.proveedor}</td>
-              <td>{suministro.fechaingreso}</td>
-              <td>{suministro.fechasalida}</td>
+              <td className="p-6 space-y-2 text-xl text-gray-800 text-center">{suministro.codigo}</td>
+              <td className="p-6 space-y-2 text-xl text-gray-800 text-center">{suministro.producto}</td>
+              <td className="p-6 space-y-2 text-xl text-gray-800 text-center">{suministro.cantidad}</td>
+              <td className="p-6 space-y-2 text-xl text-gray-800 text-center">{suministro.proveedor}</td>
+              <td className="p-6 space-y-2 text-xl text-gray-800 text-center">{suministro.fechaingreso}</td>
+              <td className="p-6 space-y-2 text-xl text-gray-800 text-center">{suministro.fechasalida}</td>
             </tr>
           ))}
         </tbody>
