@@ -1,8 +1,16 @@
 import AppLayout from './layout/appLayout'
 import SuministrosList from '~/components/suministrosList'
+import { useState, useEffect } from 'react'
+import AddSuministros from '~/components/addSuministros'
 
 
 function DashboardSuministros() {
+  const [modal, setModal] = useState(false)
+
+  const toggleModal = () => {
+    setModal(!modal)
+  }
+
   return (
     <AppLayout>
       <div>
@@ -20,7 +28,10 @@ function DashboardSuministros() {
                 className='bg-white px-2 py-1 rounded-lg w-[80%] mb-5 border border-gray-300 focus:outline-none'
               />
             </div>
-            <div className='flex bg-[#38c2cf] text-white px-2 py-1 rounded-lg cursor-pointer hover:bg-[#7ecdd4]'>
+            <div 
+              className='flex bg-[#38c2cf] text-white px-2 py-1 rounded-lg cursor-pointer hover:bg-[#7ecdd4]'
+              onClick={toggleModal}
+            >
               <p className='mr-2'>
                 Agregar
               </p>
@@ -29,6 +40,7 @@ function DashboardSuministros() {
           </div>
           <SuministrosList />
       </div>
+      {modal && <AddSuministros toggleModal={toggleModal} />}
     </AppLayout>
   )
 }
