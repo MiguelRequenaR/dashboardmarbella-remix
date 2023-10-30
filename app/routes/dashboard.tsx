@@ -15,7 +15,7 @@ function Dashboard() {
   return (
     <div className='bg-[#ffffff]'>
         <DashboardHeader />
-        <div className='flex h-screen'>
+        <div className='flex h-full'>
           <DashboardSideBar />
           <DashboardPP />
         </div>
